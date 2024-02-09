@@ -18,6 +18,11 @@ const contactSchema = new Schema(
 			require: true,
 			match: /^\(\d{3}\) \d{3}-\d{4}$/,
 		},
+		owner: {
+			type: Schema.Types.ObjectId,
+			ref: 'user',
+			require: true,
+		},
 	},
 	{
 		versionKey: false,
